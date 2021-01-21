@@ -1,0 +1,42 @@
+<div style="text-align: left; margin-bottom: 20px;">
+  <h1>
+    {{ title }}
+  </h1>
+</div>
+
+<div>
+  <table *ngIf="arrActivities" id="activities Table">
+    <!-- Add the headers! -->
+    <tr>
+        <th>ID</th>
+        <th>Activity Name</th>
+        <th><button name="refresh" id="read" (click)="read()" style="background-color: #5DB75F; color: #FFF;">Refresh</button> </th>
+        
+    </tr>
+
+    <!-- Bind the array "arrBooks" to the table. -->
+    <tr id ="activities_tr" *ngFor="let activity of arrActivities.activities">
+      <td>{{activity.id}}</td>
+        <td><input type="text" id="{{activity.id}}" value="{{activity.activityName}}"></td>
+
+
+        <!-- Operations -->
+       <td>
+          <button id="update" (click)="update($event)" style="background-color: #5DB75F; color: #FFF;">Update</button> 
+        </td>
+        <td>
+          <button id="delete" name = "delete" (click)="delete($event)" style="background-color: #D45449; color: #FFF;">Delete</button>
+        </td>
+    </tr>
+
+    <!-- Last row will have the "Create" option. -->
+    <tr>
+      <td></td>
+      <td><input type="text" id="activityName" name="activityName" value=""></td>
+      
+      <td>
+        <button id="btCreate" name="btCreate" (click)="createNew($event)">Create</button>
+      </td>
+    </tr>
+  </table>
+</div>
