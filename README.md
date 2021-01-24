@@ -1,12 +1,14 @@
+
+# Backyard
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7. This a simple UI created to test the below springboot application
+  https://github.com/jesintha/backyard-activities
+
 ng new Backyard
 
 cd Backyard
 
 ng serve --o
-
-# Backyard
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
 ## Development server
 
